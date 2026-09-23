@@ -1,0 +1,15 @@
+---
+import { kontakt, mista } from '../content/kontakt';
+const mesta = mista.map((m) => m.mesto).join(' · ');
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-brand"><b>{kontakt.znacka}</b><span>{kontakt.motto}</span></div>
+    <div class="f-links">
+      <a href={kontakt.telefonHref}>{kontakt.telefon}</a>
+      <a href={`mailto:${kontakt.email}`}>{kontakt.email}</a>
+      <span>{mesta}</span>
+    </div>
+  </div>
+</footer>

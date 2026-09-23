@@ -1,0 +1,15 @@
+---
+import type { Misto } from '../content/kontakt';
+interface Props { misto: Misto }
+const { misto } = Astro.props;
+---
+
+<div class="place">
+  <svg aria-hidden="true"><use href="#i-pin" /></svg>
+  <span class="city">{misto.mesto}</span>
+  <address>{misto.ulice}</address>
+  {misto.terminy && (
+    <span class="place-hours"><svg aria-hidden="true"><use href="#i-clock" /></svg>{misto.terminy}</span>
+  )}
+  <a href={misto.mapa} target="_blank" rel="noopener">Zobrazit na mapě</a>
+</div>

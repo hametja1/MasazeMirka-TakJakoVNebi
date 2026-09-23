@@ -1,0 +1,27 @@
+/* Barvy, písma a rozměry celého webu. Tady se mění identita. */
+:root{
+  color-scheme: light;
+  --ink:#1F2E4F;        /* námořní modrá z vizitky */
+  --ink-soft:#44506A;
+  --gold:#8E6638;       /* hnědozlatá linka a písmo */
+  --gold-line:#CDB48F;
+  --cream:#FBF7EF;      /* světlo v oblacích */
+  --cream-deep:#F3ECDF;
+  --sky:#A9C3DE;
+  --sky-deep:#5D83B4;
+  --paper:#FFFDF8;
+  --gold-light:#D8B489;  /* zlatá čitelná na tmavě modré */
+  --on-ink:#F6EFE1;
+
+  --f-caps:"Cinzel","Cormorant SC","Times New Roman",serif;
+  --f-display:"Cormorant Garamond","Garamond","Times New Roman",serif;
+  --f-body:"EB Garamond","Garamond","Georgia",serif;
+  --f-script:"Parisienne","Brush Script MT","Segoe Script",cursive;
+
+  --gutter:max(16px, 5vw);
+  --maxw:1120px;
+  --header-h:68px;
+  --sky-img:url("/img/nebe.jpg");
+  --tree-img:url("/img/strom.jpg");
+  --mirka-img:url("/img/mirka.jpg");
+}

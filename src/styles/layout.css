@@ -1,0 +1,54 @@
+/* Hlavička s navigací a patička. */
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:20;
+  background:linear-gradient(180deg, #FFFDF8 0%, var(--cream) 100%);
+  color:var(--ink);
+  border-bottom:1px solid rgba(205,180,143,.55);
+  box-shadow:0 12px 24px -20px rgba(31,46,79,.45);
+}
+.site-header::after{ /* zlatý vlásek pod lištou */
+  content:""; display:block; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold) 15%, var(--gold) 85%, transparent);
+  opacity:.55;
+}
+.site-header .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:var(--header-h)}
+.brand{display:flex; align-items:baseline; gap:.5rem; text-decoration:none; white-space:nowrap}
+.brand b{font-family:var(--f-display); font-weight:600; font-size:1.5rem; letter-spacing:.015em; color:var(--ink)}
+.brand span{font-family:var(--f-script); color:var(--gold); font-size:1.6rem; line-height:1}
+.nav ul{list-style:none; margin:0; padding:0; display:flex; gap:clamp(12px, 2.2vw, 30px)}
+.nav a{
+  font-family:var(--f-caps); text-transform:uppercase; letter-spacing:.18em; font-size:.76rem; font-weight:700;
+  text-decoration:none; color:var(--ink-soft); padding:.55rem .1rem; position:relative; transition:color .25s ease;
+}
+.nav a::after{content:""; position:absolute; left:0; right:.18em; bottom:.1rem; height:1.5px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .3s ease}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.nav a[aria-current="page"]{color:var(--gold)}
+.menu-btn{display:none; align-items:center; gap:.5rem; border:1px solid var(--gold-line); background:rgba(255,253,248,.7); color:var(--ink);
+  font-family:var(--f-caps); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; padding:.55rem .85rem; border-radius:999px; cursor:pointer; transition:background .25s, border-color .25s}
+.menu-btn:hover{background:var(--cream-deep); border-color:var(--gold)}
+.menu-btn svg{width:18px; height:18px}
+
+@media (max-width: 820px){
+  .menu-btn{display:inline-flex}
+  .nav{position:absolute; left:0; right:0; top:100%; background:var(--paper); border-bottom:1px solid var(--gold-line);
+    box-shadow:0 22px 34px -20px rgba(31,46,79,.4)}
+  .nav:not(.open){display:none}
+  .nav ul{flex-direction:column; gap:0; padding:.5rem var(--gutter) 1rem}
+  .nav li + li{border-top:1px solid rgba(205,180,143,.4)}
+  .nav a{display:block; padding:1rem 0; font-size:.82rem}
+  .nav a::after{display:none}
+  .nav a[aria-current="page"]{color:var(--gold)}
+}
+
+/* ---------- Footer ---------- */
+.site-footer{border-top:2px solid rgba(216,180,137,.5); background:var(--cream-deep); padding-block:32px 36px; margin-top:auto}
+.site-footer .wrap{display:flex; flex-wrap:wrap; gap:14px 32px; justify-content:space-between; align-items:center}
+.f-brand{display:flex; align-items:baseline; gap:.6rem; flex-wrap:wrap}
+.f-brand b{font-family:var(--f-display); font-size:1.35rem; font-weight:600}
+.f-brand span{font-family:var(--f-script); color:var(--gold); font-size:1.6rem; line-height:1}
+.f-links{display:flex; flex-wrap:wrap; gap:6px 22px; font-size:.98rem; color:var(--ink-soft)}
+.f-links a{text-decoration:none}
+.f-links a:hover{color:var(--gold)}
+.home .site-footer{display:none}

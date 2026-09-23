@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PlaceCard from '../components/PlaceCard.astro';
+import { kontakt, mista } from '../content/kontakt';
+---
+
+<Layout
+  title="Kontakt | Masáže Mirka"
+  description="Objednání na masáž v Dobříši nebo v Praze 6 – Bubenči. Telefon +420 739 562 244, takjakovnebi@gmail.com."
+>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Objednání</p>
+      <h1 id="h-kontakt">Kontakt</h1>
+      <span class="script">Těším se na setkání.</span>
+    </div>
+  </header>
+  <div class="section">
+    <div class="wrap contact">
+      <div class="contact-main">
+        <p class="contact-name">Mirka Kotrčová</p>
+        <p class="eyebrow">Termín si domluvíme telefonicky nebo e-mailem</p>
+        <a class="big-phone" href={kontakt.telefonHref}>{kontakt.telefon}</a>
+        <ul class="clist">
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href={`mailto:${kontakt.email}`}>{kontakt.email}</a></li>
+          <li><svg aria-hidden="true"><use href="#i-globe"/></svg><span>{kontakt.web}</span></li>
+        </ul>
+        <div class="ornament left" aria-hidden="true"><svg><use href="#i-leaf"/></svg></div>
+        <div class="t-actions">
+          <a class="btn btn-solid" href={kontakt.telefonHref}><svg aria-hidden="true"><use href="#i-phone"/></svg>Zavolat</a>
+          <a class="btn btn-line" href={`mailto:${kontakt.email}`}><svg aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
+        </div>
+      </div>
+      <div class="places">
+        {mista.map((m) => <PlaceCard misto={m} />)}
+      </div>
+    </div>
+  </div>
+</Layout>

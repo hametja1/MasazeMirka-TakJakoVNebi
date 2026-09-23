@@ -1,0 +1,20 @@
+{
+  "name": "masaze-mirka",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource/cinzel": "^5.1.0",
+    "@fontsource/cormorant-garamond": "^5.1.0",
+    "@fontsource/eb-garamond": "^5.1.0",
+    "@fontsource/parisienne": "^5.1.0",
+    "astro": "^5.1.1"
+  }
+}

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PriceList from '../components/PriceList.astro';
+import { kontakt } from '../content/kontakt';
+---
+
+<Layout
+  title="Ceník | Masáže Mirka"
+  description="Ceník masáží a dárkové poukazy. Hluboce relaxační masáž, klasická masáž, AromaTouch a indická masáž hlavy."
+>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Masáže Mirka</p>
+      <h1 id="h-cenik">Ceník</h1>
+      <span class="script">Čas jen pro vás.</span>
+    </div>
+  </header>
+  <div class="section">
+    <div class="wrap pricing">
+      <div>
+        <PriceList />
+        <p class="pricing-note">Termín si domluvíme telefonicky nebo e-mailem.</p>
+        <div class="t-actions" style="margin-top:1.2rem">
+          <a class="btn btn-solid" href={kontakt.telefonHref}><svg aria-hidden="true"><use href="#i-phone"/></svg>Zavolat</a>
+          <a class="btn btn-line" href="/masaze">Popis masáží</a>
+        </div>
+      </div>
+      <aside class="gift" aria-labelledby="h-gift">
+        <p class="eyebrow">Dárek</p>
+        <h2 id="h-gift">Dárkový poukaz</h2>
+        <img class="voucher-img" src="/img/poukaz.jpg" loading="lazy" decoding="async" width="1400" height="800" alt="Dárkový poukaz na masáž Masáže Mirka – Tak jako v nebi, v hodnotě 60 minut">
+        <p>Darujte někomu blízkému chvíli v nebi. Poukaz na masáž si můžete objednat telefonicky nebo e-mailem.</p>
+        <p>Možno vystavit na libovolný typ masáže nebo balíček masáží.</p>
+      </aside>
+    </div>
+  </div>
+</Layout>

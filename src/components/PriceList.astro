@@ -1,0 +1,19 @@
+---
+import { cenik } from '../content/cenik';
+---
+
+<ul class="price-list">
+  {cenik.map((p) => (
+    <li class="price-row">
+      <span class="price-info">
+        <span class="price-name">{p.nazev}</span>
+        {p.popis && <span class="price-meta">{p.popis}</span>}
+      </span>
+      <span class="price-val">
+        {p.varianty.map((v) => (
+          <span class="price-opt"><small>{v.delka}</small><b>{v.cena}</b></span>
+        ))}
+      </span>
+    </li>
+  ))}
+</ul>

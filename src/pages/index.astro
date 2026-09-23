@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { kontakt, mista } from '../content/kontakt';
+---
+
+<Layout
+  title="Masáže Mirka – Tak jako v nebi"
+  description="Masáže Mirka – hluboce relaxační masáž, klasická masáž, AromaTouch a indická masáž hlavy v Dobříši a v Praze 6 – Bubenči."
+>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-card">
+        <h1>Masáže Mirka</h1>
+        <p class="script tagline">Tak jako v nebi.</p>
+        <div class="ornament" aria-hidden="true"><svg><use href="#i-leaf"/></svg></div>
+        <div class="contact-grid">
+          <ul class="clist">
+            <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href={kontakt.telefonHref}>{kontakt.telefon}</a></li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href={`mailto:${kontakt.email}`}>{kontakt.email}</a></li>
+          </ul>
+          <span class="divider" aria-hidden="true"></span>
+          <ul class="clist">
+            {mista.map((m) => (
+              <li><svg aria-hidden="true"><use href="#i-pin" /></svg><span>{m.ulice}, {m.mesto}</span></li>
+            ))}
+          </ul>
+        </div>
+        <div class="actions" style="margin-top:.6rem">
+          <a class="btn btn-solid" href="/masaze">Nabídka masáží</a>
+          <a class="btn btn-line" href="/kontakt">Objednat se</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
