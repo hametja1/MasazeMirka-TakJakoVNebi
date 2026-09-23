@@ -63,7 +63,8 @@ příslušný `import` v `src/layouts/Layout.astro`.
    output directory `dist`.
 4. Po prvním nasazení přidejte v záložce **Custom domains** vlastní doménu a nasměrujte
    na ni DNS podle pokynů Cloudflare. HTTPS certifikát se vystaví sám.
-5. Do `astro.config.mjs` a `public/robots.txt` doplňte finální adresu domény.
+5. Doména: hlavní varianta je `https://masazemirka-takjakovnebi.cz` (bez www),
+   `www` se na ni přesměrovává pravidlem Redirect Rules v Cloudflare.
 
 Každý push do větve `main` nasadí novou verzi, pull requesty dostanou náhledovou adresu.
 
