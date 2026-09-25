@@ -8,8 +8,8 @@ export const cenik: Polozka[] = [
     popis: "celé tělo včetně hlavy a obličeje",
     varianty: [
       { delka: "60 min", cena: "1 300 Kč" },
-      { delka: "120 min", cena: "2 500 Kč" },
       { delka: "90 min", cena: "2 000 Kč" },
+      { delka: "120 min", cena: "2 500 Kč" },
     ],
   },
   {
